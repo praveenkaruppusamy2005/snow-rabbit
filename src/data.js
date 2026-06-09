@@ -1,6 +1,5 @@
 // ─────────────────────────────────────────
-// API base URL — override with VITE_API_BASE env var for production
-export const API_BASE = import.meta.env.VITE_API_BASE ?? 'http://localhost:5000';
+export const API_BASE = import.meta.env.VITE_API_BASE ?? (import.meta.env.PROD ? '' : 'http://localhost:5000');
 
 // ─────────────────────────────────────────
 // DEPOT — Regional Vaccine Hub, Chennai
